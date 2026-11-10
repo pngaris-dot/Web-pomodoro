@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video id="bgVideo" class="bg-video" muted loop playsinline></video>
+
+    <main class="card">
+        <h1>Pomodoro</h1>
+
+        <div class="modes">
+            <button class="mode active" data-mode="focus">Focus</button>
+            <button class="mode" data-mode="short">Short break</button>
+            <button class="mode" data-mode="long">Long break</button>
+        </div>
+
+        <div id="timer">25:00</div>
+
+        <div class="actions">
+            <button id="start">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+    </main>
+
+    <div class="dock">
+        <details class="bgpanel">
+            <summary>Background</summary>
+            <div id="bgGrid" class="bg-grid"></div>
+            <label class="upload">+ Upload image or video
+                <input type="file" id="bgFile" accept="image/*,video/mp4,video/webm" hidden>
+            </label>
+            <small id="bgMsg"></small>
+        </details>
+
+        <details class="settings">
+            <summary>Settings</summary>
+
+            <label>Font
+                <select id="font">
+                    <option value="sans-serif">Sans-serif</option>
+                    <option value="Georgia, serif">Serif</option>
+                    <option value="'Courier New', monospace">Monospace</option>
+                    <option value="'Comic Sans MS', cursive">Cursive</option>
+                </select>
+            </label>
+
+            <label>Background color <input type="color" id="bgColor" value="#9e4545"></label>
+            <label>Button color <input type="color" id="accentColor" value="#ff6b5e"></label>
+            <label>word color <input type="color" id="textColor" value="#ffffff"></label>
+
+            <label>Focus mins <input type="number" id="focusMin" min="1" max="180" value="25"></label>
+            <label>Short-break mins <input type="number" id="shortMin" min="1" max="180" value="5"></label>
+            <label>Long-break mins <input type="number" id="longMin" min="1" max="180" value="15"></label>
+        </details>
+    </div>
+
+    <aside class="notes">
+        <div class="notes-head">
+            <strong>Notes</strong>
+            <button type="button" id="addNote" class="mini">+ Note</button>
+        </div>
+        <div id="noteList" class="note-list"></div>
+    </aside>
+
+    <nav class="music">
+        <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"
+        title="Spotify">
+            <img src="images/sportify.png" alt="Spotify">
+        </a>
+
+        <a href="https://music.youtube.com" target="_blank" rel="noopener noreferrer"
+        title="YouTube Music">
+            <img src="images/ytmusic.png" alt="YouTube Music">
+        </a>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
