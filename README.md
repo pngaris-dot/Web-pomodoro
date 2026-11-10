@@ -15,7 +15,7 @@ Một web đồng hồ pomodoro có đổi hình nền (ảnh hoặc video), tù
   Chọn nhanh trong lưới hình nền có sẵn: các video .mp4 bỏ trong thư mục static/backgrounds được Go tự quét và hiện thành ô xem trước.
   Tải lên ảnh (JPG, PNG, WEBP, GIF) hoặc video (MP4, WEBM), tối đa 200MB. Server kiểm tra nội dung thật của file chứ không chỉ nhìn đuôi tên file.
   Video nền chạy lặp, tắt tiếng, phủ kín màn hình. Ảnh nền phủ kín trang.
-  Nút × ở góc ô để xóa hình đã tải lên. Hình có sẵn trong static/backgrounds không có nút xóa và server cũng từ chối xóa chúng.
+  Nút x ở góc ô để xóa hình đã tải lên. Hình có sẵn trong static/backgrounds không có nút xóa và server cũng từ chối xóa chúng.
   Ô None để bỏ hình nền, quay về màu nền thường.
   Hình nền đang chọn được nhớ lại khi tải lại trang.
 4. Notes (ghi chú)
